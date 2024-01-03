@@ -1,0 +1,102 @@
+[
+    {
+        "model":"intranet.unidade",
+        "pk" : 1,
+        "fields" : {
+            "nome" : "MAIS SABOR NACIONAL",
+            "cnpj" : "12345678901234"
+        }
+    },
+    {
+        "model":"intranet.unidade",
+        "pk" : 2,
+        "fields" : {
+            "nome" : "MAIS SABOR PARANA",
+            "cnpj" : "12345678901234"
+        }
+    },
+    {
+        "model":"intranet.unidade",
+        "pk" : 3,
+        "fields" : {
+            "nome" : "MAIS SABOR TOCANTINS",
+            "cnpj" : "12345678901234"
+        }
+    },
+    {
+        "model":"intranet.unidade",
+        "pk" : 4,
+        "fields" : {
+            "nome" : "MAIS SABOR MARANHAO",
+            "cnpj" : "12345678901234"
+        }
+    },
+    {
+        "model":"intranet.unidade",
+        "pk" : 5,
+        "fields" : {
+            "nome" : "MS SERVICE LTDA",
+            "cnpj" : "12345678901234"
+        }
+    },
+    {
+        "model":"intranet.unidade",
+        "pk" : 6,
+        "fields" : {
+            "nome" : "VERSE SOLUTIONS LTDA",
+            "cnpj" : "12345678901234"
+        }
+    },
+
+    {
+        "model":"intranet.unidade",
+        "pk" : 7,
+        "fields" : {
+            "nome" : "BELLAGIO ADMINISTRAÇÕES LTDA",
+            "cnpj" : "12345678901234"
+        }
+    },
+    {
+        "model":"intranet.departamento",
+        "pk" : 1,
+        "fields": {
+            "nome" : "ADMINISTRAÇÃO"
+        }
+    },
+    {
+        "model":"intranet.departamento",
+        "pk" : 2,
+        "fields": {
+            "nome" : "CONTABILIDADE"
+        }
+    },
+    {
+        "model":"intranet.departamento",
+        "pk" : 3,
+        "fields": {
+            "nome" : "NUTRIÇÃO"
+        }
+    },
+    {
+        "model":"intranet.departamento",
+        "pk" : 4,
+        "fields": {
+            "nome" : "ENGENHARIA"
+        }
+    },
+
+    {
+        "model":"intranet.departamento",
+        "pk" : 5,
+        "fields": {
+            "nome" : "SOFTWARE"
+        }
+    },
+    {
+        "model":"intranet.departamento",
+        "pk" : 6,
+        "fields": {
+            "nome" : "RECURSOS HUMANOS"
+        }
+    }
+]

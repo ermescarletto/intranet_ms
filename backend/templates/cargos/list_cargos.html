@@ -1,0 +1,82 @@
+{% extends 'base.html'%}
+
+{% block content %}
+<div class="container">
+    <button id="create_cargos" class="mt-3 mb-3 btn btn-primary" type="button" name="button">+ Unidade</button>
+<section>
+    <table id="unidadeTable" class="table responsive display">
+        <thead>
+            <tr>
+                <th>Cargo</th>
+                <th>Dia Festivo</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for cargo in cargos %}
+            <tr>
+                <td>{{ cargo.descricao }}</td>
+                <td>{{ cargo.dia_festivo}}</td>
+                <td>
+                        {% if perms.cms.view_bannercampanha %}
+                        <button type="button" class="view bs-modal btn btn-sm btn-primary" data-form-url="#">
+                            <span class="fa fa-eye"></span>
+                        </button>
+                        {% else %}
+                        <button type="button" class="btn btn-sm btn-secondary">
+                            <span class="fa fa-lock"></span>
+                        </button>
+                        {% endif %}
+                        {% if perms.cms.edit_bannercampanha %}
+                            <button type="button" class="edit bs-modal btn btn-sm btn-secondary" data-form-url="#">
+                            <span class="fa fa-pen"></span>
+                        </button>
+                         {% else %}
+                        <button type="button" class="btn btn-sm btn-secondary">
+                            <span class="fa fa-lock"></span>
+                        </button>
+                        {% endif %}
+                        {% if perms.cms.delete_bannercampanha %}
+                        <button type="button" class="delete bs-modal btn btn-sm btn-danger" data-form-url="#">
+                            <span class="fa fa-trash"></span>
+                        </button>
+                        {% else %}
+                        <button type="button" class="btn btn-sm btn-secondary">
+                            <span class="fa fa-lock"></span>
+                        </button>
+                        {% endif %}
+                        </td>
+                    </button>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</section>
+</div>
+<div class="modal fade" tabindex="-1" role="dialog" id="modal">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content"></div>
+    </div>
+  </div>
+{% include 'login/logout_modal.html' %}
+{% endblock %}
+
+{% block footer_scripts %}
+<script>
+    $(document).ready( function () {
+    $('#unidadeTable').DataTable({
+      language : {
+            url: '//cdn.datatables.net/plug-ins/1.13.7/i18n/pt-BR.json',
+        }
+      });
+    });
+    document.addEventListener('DOMContentLoaded', (e) => {
+    modalForm(document.getElementById('create_unidade'), {
+    formURL: "{% url 'intranet:create_unidade' %}"
+  })
+});
+</script>
+{% endblock footer_scripts %}
+
+

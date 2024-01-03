@@ -1,0 +1,27 @@
+{% load widget_tweaks %}
+
+<div class="modal-header">
+  <h5 class="modal-title">{{ modal_title }}</h5>
+  <button type="button" class="btn close btn-rounded btn-secondary" data-bs-dismiss="modal" data-dismiss="modal" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+
+<div class="modal-body">
+  <table class="table table-borderless">
+    {% for key, value in dict_data.items %}
+    <tr>
+      <td>
+        <strong>{{ key }}</strong>
+      </td>
+      <td>
+        {{ value }}
+      </td>
+    </tr>
+    {% endfor %}
+</table>
+
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-default btn-primary bg-gradient" data-bs-dismiss="modal" data-dismiss="modal-view">Fechar</button>
+</div>

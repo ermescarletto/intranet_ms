@@ -1,0 +1,54 @@
+{% load static %}
+
+<div class="container mt-5">
+    <div class="row d-flex justify-content-center">
+        <div class="col-md-10 col-xl-8 text-center">
+          <h3 class="mb-4">Aniversariantes</h3>
+          <p class="mb-4 pb-2 mb-md-5 pb-md-0">
+            Confira o pessoal que está comemorando mais um ano de vida este mês.
+          </p>
+        </div>
+      </div>
+   <div class="row d-flex ">
+   {% for user in aniversariantes %}
+   <div class="col-md-4">
+    <div class="card  text-white">
+      <div class="card-header {% if forloop.counter|divisibleby:2 %} bg-gradient-yellow{% else %}bg-gradient-green{% endif %} hover-overlay" data-mdb-ripple-init="" data-mdb-ripple-color="light">
+      <table>
+          <tr>
+            <td>
+              <div class="card-img-colab"> 
+               {% if user.perfilcolaborador.imagem %}
+
+                <img src="/media/{{user.perfilcolaborador.imagem}}" class="mr-2 card-img-colab rounded-circle" style="max-width: 75; max-height: 75;">        
+              <a href="#!">
+          </a>
+      {% else %}
+        <img src="{% static 'avatar-placeholder.gif' %}" class="mr-2 card-img-colab rounded-circle" style="max-width: 75; max-height: 75;">        
+          <a href="#!">
+          </a>
+      {% endif %}
+    
+              </div>
+
+
+    </td>
+    <td>
+
+      <h6 class="">{{ user.first_name }} {{ user.last_name }}</h6>
+      <h6 class="card-subtitle mb-2 text-muted">{{user.perfilcolaborador.cargo}}</h6>
+      <p class="card-text">{{ user.perfilcolaborador.unidade}} - {{ user.perfilcolaborador.departamento }}</p>
+      <p class="card-text">{{ user.data_nascimento }}</p>
+
+    </td>
+  </tr>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
+        {% endfor %}
+      

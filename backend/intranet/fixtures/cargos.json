@@ -1,0 +1,770 @@
+[
+    {
+        "model": "intranet.cargo",
+        "pk": "93001008",
+        "fields": {
+            "descricao": "ACOUGUEIRO",
+            "dia_festivo": "2023-10-09"
+        }
+    },
+    {
+        "model": "intranet.cargo",
+        "pk": "99081081",
+        "fields": {
+            "descricao": "ADVOGADA",
+            "dia_festivo": "2023-08-11"
+        }
+    },
+    {
+        "model": "intranet.cargo",
+        "pk": "99081072",
+        "fields": {
+            "descricao": "AJUDANTE DE MOTORISTA",
+            "dia_festivo": null
+        }
+    },
+    {
+        "model": "intranet.cargo",
+        "pk": "93001002",
+        "fields": {
+            "descricao": "ALMOXARIFE",
+            "dia_festivo": "2023-08-16"
+        }
+    },
+    {
+        "model": "intranet.cargo",
+        "pk": "99081054",
+        "fields": {
+            "descricao": "ANALISTA CONTABIL",
+            "dia_festivo": "2023-04-25"
+        }
+    },
+    {
+        "model": "intranet.cargo",
+        "pk": "99081022",
+        "fields": {
+            "descricao": "ANALISTA DE COMPRAS",
+            "dia_festivo": "2023-09-19"
+        }
+    },
+    {
+        "model": "intranet.cargo",
+        "pk": "99081079",
+        "fields": {
+            "descricao": "ANALISTA DE DESENVOLVIMENTO JR",
+            "dia_festivo": "2023-09-13"
+        }
+    },
+    {
+        "model": "intranet.cargo",
+        "pk": "99081025",
+        "fields": {
+            "descricao": "ANALISTA DE QUALIDADE",
+            "dia_festivo": "2023-11-14"
+        }
+    },
+    {
+        "model": "intranet.cargo",
+        "pk": "93004002",
+        "fields": {
+            "descricao": "ANALISTA DE RH",
+            "dia_festivo": "2023-06-03"
+        }
+    },
+    {
+        "model": "intranet.cargo",
+        "pk": "95001075",
+        "fields": {
+            "descricao": "ANALISTA FINANCEIRO",
+            "dia_festivo": "2023-05-18"
+        }
+    },
+    {
+        "model": "intranet.cargo",
+        "pk": "93001040",
+        "fields": {
+            "descricao": "MENOR APRENDIZ",
+            "dia_festivo": "2023-04-24"
+        }
+    },
+    {
+        "model": "intranet.cargo",
+        "pk": "99081017",
+        "fields": {
+            "descricao": "ASSISTENTE ADMINISTRATIVO ",
+            "dia_festivo": "2023-10-15"
+        }
+    },
+    {
+        "model": "intranet.cargo",
+        "pk": "99081046",
+        "fields": {
+            "descricao": "ASSISTENTE CONTABIL",
+            "dia_festivo": "2023-04-25"
+        }
+    },
+    {
+        "model": "intranet.cargo",
+        "pk": "99081027",
+        "fields": {
+            "descricao": "ASSISTENTE DE NUTRICAO",
+            "dia_festivo": "2023-03-31"
+        }
+    },
+    {
+        "model": "intranet.cargo",
+        "pk": "98001010",
+        "fields": {
+            "descricao": "ASSISTENTE FINANCEIRO",
+            "dia_festivo": "2023-09-09"
+        }
+    },
+    {
+        "model": "intranet.cargo",
+        "pk": "93004006",
+        "fields": {
+            "descricao": "ASSISTENTE FISCAL",
+            "dia_festivo": "2023-02-02"
+        }
+    },
+    {
+        "model": "intranet.cargo",
+        "pk": "93001139",
+        "fields": {
+            "descricao": "ASSISTENTE RH",
+            "dia_festivo": "2023-05-20"
+        }
+    },
+    {
+        "model": "intranet.cargo",
+        "pk": "93007030",
+        "fields": {
+            "descricao": "AUXILIAR DE COZINHA",
+            "dia_festivo": "2023-05-10"
+        }
+    },
+    {
+        "model": "intranet.cargo",
+        "pk": "93005002",
+        "fields": {
+            "descricao": "AUXILIAR DE ALMOXARIFE",
+            "dia_festivo": "2023-08-16"
+        }
+    },
+    {
+        "model": "intranet.cargo",
+        "pk": "93002002",
+        "fields": {
+            "descricao": "AUXILIAR DE SERVICOS GERAIS",
+            "dia_festivo": "2023-02-22"
+        }
+    },
+    {
+        "model": "intranet.cargo",
+        "pk": "93011090",
+        "fields": {
+            "descricao": "AUXILIAR ESTOQUE",
+            "dia_festivo": "2023-08-16"
+        }
+    },
+    {
+        "model": "intranet.cargo",
+        "pk": "93001137",
+        "fields": {
+            "descricao": "AUXILIAR FINANCEIRO",
+            "dia_festivo": "2023-09-09"
+        }
+    },
+    {
+        "model": "intranet.cargo",
+        "pk": "93001057",
+        "fields": {
+            "descricao": "AUXILIAR LIMPEZA",
+            "dia_festivo": "2023-02-22"
+        }
+    },
+    {
+        "model": "intranet.cargo",
+        "pk": "93005013",
+        "fields": {
+            "descricao": "AUXILIAR MAGAREFE",
+            "dia_festivo": "2023-10-09"
+        }
+    },
+    {
+        "model": "intranet.cargo",
+        "pk": "93001129",
+        "fields": {
+            "descricao": "AUXILIAR OPERACIONAL",
+            "dia_festivo": "2023-02-22"
+        }
+    },
+    {
+        "model": "intranet.cargo",
+        "pk": "97001021",
+        "fields": {
+            "descricao": "AUXILIAR  DE LIMPEZA",
+            "dia_festivo": "2023-02-22"
+        }
+    },
+    {
+        "model": "intranet.cargo",
+        "pk": "99081013",
+        "fields": {
+            "descricao": "AUXILIAR ACOUGUE",
+            "dia_festivo": "2023-10-09"
+        }
+    },
+    {
+        "model": "intranet.cargo",
+        "pk": "99081037",
+        "fields": {
+            "descricao": "AUXILIAR ADMINIST FINANCEIRO",
+            "dia_festivo": "2023-10-15"
+        }
+    },
+    {
+        "model": "intranet.cargo",
+        "pk": "93003031",
+        "fields": {
+            "descricao": "AUXILIAR ADMINISTRATIVO",
+            "dia_festivo": "2023-10-15"
+        }
+    },
+    {
+        "model": "intranet.cargo",
+        "pk": "93007014",
+        "fields": {
+            "descricao": "AUXILIAR ALMOXARIFE",
+            "dia_festivo": "2023-08-16"
+        }
+    },
+    {
+        "model": "intranet.cargo",
+        "pk": "99081026",
+        "fields": {
+            "descricao": "AUXILIAR CONTROLE DE QUALIDADE",
+            "dia_festivo": "2023-11-14"
+        }
+    },
+    {
+        "model": "intranet.cargo",
+        "pk": "93001038",
+        "fields": {
+            "descricao": "AUXILIAR COZINHA",
+            "dia_festivo": "2023-05-10"
+        }
+    },
+    {
+        "model": "intranet.cargo",
+        "pk": "93003040",
+        "fields": {
+            "descricao": "AUXILIAR DE  MANUTENCAO",
+            "dia_festivo": "2023-02-22"
+        }
+    },
+    {
+        "model": "intranet.cargo",
+        "pk": "99081036",
+        "fields": {
+            "descricao": "AUXILIAR DE ACOUGUE",
+            "dia_festivo": "2023-10-09"
+        }
+    },
+    {
+        "model": "intranet.cargo",
+        "pk": "94001080",
+        "fields": {
+            "descricao": "AUXILIAR DE ALMOXARIFE",
+            "dia_festivo": "2023-08-16"
+        }
+    },
+    {
+        "model": "intranet.cargo",
+        "pk": "98001003",
+        "fields": {
+            "descricao": "AUXILIAR DE ESTOQUE",
+            "dia_festivo": "2023-08-16"
+        }
+    },
+    {
+        "model": "intranet.cargo",
+        "pk": "99081023",
+        "fields": {
+            "descricao": "AUXILIAR DE NUTRICAO",
+            "dia_festivo": "2023-03-31"
+        }
+    },
+    {
+        "model": "intranet.cargo",
+        "pk": "99081065",
+        "fields": {
+            "descricao": "AUXILIAR DE PADARIA",
+            "dia_festivo": "2023-07-08"
+        }
+    },
+    {
+        "model": "intranet.cargo",
+        "pk": "95001147",
+        "fields": {
+            "descricao": "AUXILIAR DE RH",
+            "dia_festivo": "2023-06-03"
+        }
+    },
+    {
+        "model": "intranet.cargo",
+        "pk": "99081066",
+        "fields": {
+            "descricao": "AUXILIAR DE SUPERVISAO",
+            "dia_festivo": null
+        }
+    },
+    {
+        "model": "intranet.cargo",
+        "pk": "93004009",
+        "fields": {
+            "descricao": "AUXILIAR FINANCEIRO",
+            "dia_festivo": null
+        }
+    },
+    {
+        "model": "intranet.cargo",
+        "pk": "99081047",
+        "fields": {
+            "descricao": "AUXILIAR FISCAL",
+            "dia_festivo": null
+        }
+    },
+    {
+        "model": "intranet.cargo",
+        "pk": "93001102",
+        "fields": {
+            "descricao": "AUXILIAR MAGAREFE",
+            "dia_festivo": null
+        }
+    },
+    {
+        "model": "intranet.cargo",
+        "pk": "99081039",
+        "fields": {
+            "descricao": "AUXILIAR OPERACIONAL",
+            "dia_festivo": "2023-02-22"
+        }
+    },
+    {
+        "model": "intranet.cargo",
+        "pk": "93001105",
+        "fields": {
+            "descricao": "CHEFE DE COZINHA",
+            "dia_festivo": "2023-05-13"
+        }
+    },
+    {
+        "model": "intranet.cargo",
+        "pk": "93005088",
+        "fields": {
+            "descricao": "COMPRADOR",
+            "dia_festivo": "2023-09-19"
+        }
+    },
+    {
+        "model": "intranet.cargo",
+        "pk": "95001112",
+        "fields": {
+            "descricao": "CONFEITEIRO",
+            "dia_festivo": null
+        }
+    },
+    {
+        "model": "intranet.cargo",
+        "pk": "95001107",
+        "fields": {
+            "descricao": "CONTADOR",
+            "dia_festivo": "2023-09-22"
+        }
+    },
+    {
+        "model": "intranet.cargo",
+        "pk": "99081044",
+        "fields": {
+            "descricao": "COORDENADORA RH",
+            "dia_festivo": "2023-06-03"
+        }
+    },
+    {
+        "model": "intranet.cargo",
+        "pk": "93001007",
+        "fields": {
+            "descricao": "COPEIRA",
+            "dia_festivo": "2023-04-27"
+        }
+    },
+    {
+        "model": "intranet.cargo",
+        "pk": "93001018",
+        "fields": {
+            "descricao": "COZINHEIRA",
+            "dia_festivo": "2023-05-10"
+        }
+    },
+    {
+        "model": "intranet.cargo",
+        "pk": "99081020",
+        "fields": {
+            "descricao": "DIRETOR",
+            "dia_festivo": "2023-11-12"
+        }
+    },
+    {
+        "model": "intranet.cargo",
+        "pk": "99081061",
+        "fields": {
+            "descricao": "ENCARREGADA DE LIMPEZA",
+            "dia_festivo": null
+        }
+    },
+    {
+        "model": "intranet.cargo",
+        "pk": "99081050",
+        "fields": {
+            "descricao": "ENCARREGADA OPERACIONAL",
+            "dia_festivo": null
+        }
+    },
+    {
+        "model": "intranet.cargo",
+        "pk": "99081056",
+        "fields": {
+            "descricao": "ENCARREGADO ADM OPERACIONAL",
+            "dia_festivo": null
+        }
+    },
+    {
+        "model": "intranet.cargo",
+        "pk": "98001011",
+        "fields": {
+            "descricao": "ENCARREGADO ADMINISTRATIVO",
+            "dia_festivo": null
+        }
+    },
+    {
+        "model": "intranet.cargo",
+        "pk": "93001148",
+        "fields": {
+            "descricao": "ENCARREGADO COZINHA",
+            "dia_festivo": "2023-05-13"
+        }
+    },
+    {
+        "model": "intranet.cargo",
+        "pk": "95001032",
+        "fields": {
+            "descricao": "ENCARREGADO DE ESTOQUE",
+            "dia_festivo": null
+        }
+    },
+    {
+        "model": "intranet.cargo",
+        "pk": "98001002",
+        "fields": {
+            "descricao": "ENCARREGADO DE LIMPEZA",
+            "dia_festivo": "2023-08-13"
+        }
+    },
+    {
+        "model": "intranet.cargo",
+        "pk": "94001104",
+        "fields": {
+            "descricao": "ENCARREGADO DO MANUTENCAO",
+            "dia_festivo": null
+        }
+    },
+    {
+        "model": "intranet.cargo",
+        "pk": "99081041",
+        "fields": {
+            "descricao": "ENCARREGADO OPERACIONAL ADMINISTRATIVO",
+            "dia_festivo": null
+        }
+    },
+    {
+        "model": "intranet.cargo",
+        "pk": "98001006",
+        "fields": {
+            "descricao": "ESTAGIARIO",
+            "dia_festivo": "2023-08-18"
+        }
+    },
+    {
+        "model": "intranet.cargo",
+        "pk": "99081078",
+        "fields": {
+            "descricao": "ESTAGIARIO DE NUTRICAO",
+            "dia_festivo": null
+        }
+    },
+    {
+        "model": "intranet.cargo",
+        "pk": "97001004",
+        "fields": {
+            "descricao": "ESTOQUISTA",
+            "dia_festivo": "2023-08-16"
+        }
+    },
+    {
+        "model": "intranet.cargo",
+        "pk": "95001082",
+        "fields": {
+            "descricao": "FATURISTA",
+            "dia_festivo": "2023-06-10"
+        }
+    },
+    {
+        "model": "intranet.cargo",
+        "pk": "93018148",
+        "fields": {
+            "descricao": "FRUTEIRO",
+            "dia_festivo": null
+        }
+    },
+    {
+        "model": "intranet.cargo",
+        "pk": "98001005",
+        "fields": {
+            "descricao": "GERENTE ADMINISTRATIVO",
+            "dia_festivo": "2023-09-09"
+        }
+    },
+    {
+        "model": "intranet.cargo",
+        "pk": "93004017",
+        "fields": {
+            "descricao": "GERENTE COMERCIAL",
+            "dia_festivo": "2023-06-04"
+        }
+    },
+    {
+        "model": "intranet.cargo",
+        "pk": "99081016",
+        "fields": {
+            "descricao": "GERENTE COMERCIAL 1",
+            "dia_festivo": "2023-06-04"
+        }
+    },
+    {
+        "model": "intranet.cargo",
+        "pk": "99081051",
+        "fields": {
+            "descricao": "GERENTE DE COMPRAS",
+            "dia_festivo": null
+        }
+    },
+    {
+        "model": "intranet.cargo",
+        "pk": "99081033",
+        "fields": {
+            "descricao": "GERENTE DE CUSTOS E CONTRATOS",
+            "dia_festivo": null
+        }
+    },
+    {
+        "model": "intranet.cargo",
+        "pk": "95001020",
+        "fields": {
+            "descricao": "GERENTE DE PRODUCAO",
+            "dia_festivo": null
+        }
+    },
+    {
+        "model": "intranet.cargo",
+        "pk": "99081053",
+        "fields": {
+            "descricao": "GERENTE DE VENDAS",
+            "dia_festivo": "2023-06-04"
+        }
+    },
+    {
+        "model": "intranet.cargo",
+        "pk": "99081032",
+        "fields": {
+            "descricao": "GERENTE FINANCEIRO",
+            "dia_festivo": "2023-09-09"
+        }
+    },
+    {
+        "model": "intranet.cargo",
+        "pk": "99081021",
+        "fields": {
+            "descricao": "GERENTE GERAL",
+            "dia_festivo": "2023-06-04"
+        }
+    },
+    {
+        "model": "intranet.cargo",
+        "pk": "98001001",
+        "fields": {
+            "descricao": "GERENTE OPERACIONAL",
+            "dia_festivo": null
+        }
+    },
+    {
+        "model": "intranet.cargo",
+        "pk": "93001055",
+        "fields": {
+            "descricao": "GERENTE REGIONAL",
+            "dia_festivo": null
+        }
+    },
+    {
+        "model": "intranet.cargo",
+        "pk": "95001127",
+        "fields": {
+            "descricao": "GERENTE RH",
+            "dia_festivo": null
+        }
+    },
+    {
+        "model": "intranet.cargo",
+        "pk": "99081035",
+        "fields": {
+            "descricao": "JARDINEIRO",
+            "dia_festivo": "2023-12-15"
+        }
+    },
+    {
+        "model": "intranet.cargo",
+        "pk": "95001076",
+        "fields": {
+            "descricao": "MAGAREFE",
+            "dia_festivo": "2023-10-09"
+        }
+    },
+    {
+        "model": "intranet.cargo",
+        "pk": "94009147",
+        "fields": {
+            "descricao": "MANUTENCAO",
+            "dia_festivo": "2023-12-20"
+        }
+    },
+    {
+        "model": "intranet.cargo",
+        "pk": "99081073",
+        "fields": {
+            "descricao": "MEIO OFICIAL",
+            "dia_festivo": null
+        }
+    },
+    {
+        "model": "intranet.cargo",
+        "pk": "99081080",
+        "fields": {
+            "descricao": "MOTORISTA",
+            "dia_festivo": "2023-06-25"
+        }
+    },
+    {
+        "model": "intranet.cargo",
+        "pk": "97001010",
+        "fields": {
+            "descricao": "NUTRICIONISTA",
+            "dia_festivo": "2023-08-31"
+        }
+    },
+    {
+        "model": "intranet.cargo",
+        "pk": "99081068",
+        "fields": {
+            "descricao": "PADEIRO",
+            "dia_festivo": "2023-07-08"
+        }
+    },
+    {
+        "model": "intranet.cargo",
+        "pk": "99081055",
+        "fields": {
+            "descricao": "SUPERINTENDENTE",
+            "dia_festivo": null
+        }
+    },
+    {
+        "model": "intranet.cargo",
+        "pk": "93003027",
+        "fields": {
+            "descricao": "SUPERVISOR MANUTENCAO",
+            "dia_festivo": null
+        }
+    },
+    {
+        "model": "intranet.cargo",
+        "pk": "99081034",
+        "fields": {
+            "descricao": "SUPERVISOR DE POS VENDAS",
+            "dia_festivo": null
+        }
+    },
+    {
+        "model": "intranet.cargo",
+        "pk": "93001060",
+        "fields": {
+            "descricao": "SUPERVISOR DE RH",
+            "dia_festivo": null
+        }
+    },
+    {
+        "model": "intranet.cargo",
+        "pk": "99081049",
+        "fields": {
+            "descricao": "SUPERVISOR DE TRANSPORTE",
+            "dia_festivo": null
+        }
+    },
+    {
+        "model": "intranet.cargo",
+        "pk": "99081012",
+        "fields": {
+            "descricao": "Supervisor Operacional",
+            "dia_festivo": null
+        }
+    },
+    {
+        "model": "intranet.cargo",
+        "pk": "93001014",
+        "fields": {
+            "descricao": "SUPERVISORA",
+            "dia_festivo": null
+        }
+    },
+    {
+        "model": "intranet.cargo",
+        "pk": "97001016",
+        "fields": {
+            "descricao": "TECNICO EM  NUTRICAO",
+            "dia_festivo": "2023-06-27"
+        }
+    },
+    {
+        "model": "intranet.cargo",
+        "pk": "99081045",
+        "fields": {
+            "descricao": "TECNICO EM MANUTENCAO",
+            "dia_festivo": "2023-09-23"
+        }
+    },
+    {
+        "model": "intranet.cargo",
+        "pk": "93004011",
+        "fields": {
+            "descricao": "TECNICO SEGURAN\u00c7A DO TRABALHO",
+            "dia_festivo": "2023-09-27"
+        }
+    },
+    {
+        "model": "intranet.cargo",
+        "pk": "96001001",
+        "fields": {
+            "descricao": "VENDEDOR",
+            "dia_festivo": null
+        }
+    }
+]

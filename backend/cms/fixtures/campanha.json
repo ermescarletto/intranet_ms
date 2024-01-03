@@ -1,0 +1,26 @@
+[
+    {
+        "model":"cms.BannerCampanha",
+        "pk" : 1,
+        "fields" : {
+            "titulo_campanha" : "Novembro Azul",
+            "slogan_campanha" : "Dedo no dos outros é refresco...",
+            "imagem_campanha" : "media/campanhas/banner.png",
+            "data_inicial" : "2023-11-20",
+            "data_final" : "2023-11-30",
+            "ativo" : true
+        }
+    },
+    {
+        "model":"cms.BannerCampanha",
+        "pk" : 2,
+        "fields" : {
+            "titulo_campanha" : "Natal Vermelho",
+            "slogan_campanha" : "Pai stalin adora o natal...",
+            "imagem_campanha" : "media/campanhas/banner.png",
+            "data_inicial" : "2023-12-01",
+            "data_final" : "2023-12-31",
+            "ativo" : true
+        }
+    }
+]

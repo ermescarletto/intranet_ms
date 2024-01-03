@@ -1,0 +1,125 @@
+{% extends 'base.html'%}
+
+{% block content %}
+<div class="container">
+    <button id="create_user" class="mt-3 mb-3 btn btn-primary" type="button" name="button">+ Usuário</button>
+<section>
+    <table id="equipeTable" class="table responsive display">
+        <thead>
+            <tr>
+                <th>Imagem</th>
+                <th>Nome</th>
+                <th>E-mail</th>
+                <th>Unidade</th>
+                <th>Departamento</th>
+                <th>Função</th>
+                <th>Aniversário</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for user in users %}
+            
+            <tr>
+                <td><img src="/media/{{user.perfilcolaborador.imagem}}" class="avatar" style="max-height: 50px;max-width: 50px;"></td>
+                <td>{{ user.first_name }} {{ user.last_name }}</td>
+                <td>{{ user.email }}</td>
+                <td>{{ user.perfilcolaborador.unidade }}</td>
+                <td>{{ user.perfilcolaborador.departamento }}</td>
+                <td>{{ user.perfilcolaborador.cargo }}</td>
+                <td>{{ user.data_nascimento }}</td>
+                
+        
+                <td>
+                        {% if perms.users.view_user %}
+                        <button type="button" class="view bs-modal btn btn-sm btn-primary" data-form-url="{% url 'users:detail_user' user.id %}">
+                            <span class="fa fa-eye"></span>
+                        </button>
+                        {% else %}
+                        <button type="button" class="btn btn-sm btn-secondary">
+                            <span class="fa fa-lock"></span>
+                        </button>
+                        {% endif %}
+                        {% if perms.users.edit_user %}
+                            <button type="button" class="edit bs-modal btn btn-sm btn-secondary" data-form-url="{% url 'users:user_edit' user.id %}">
+                            <span class="fa fa-pen"></span>
+                        </button>
+                          {% if user.perfilcolaborador %}
+                          <button type="button" class="edit bs-modal btn btn-sm btn-secondary" data-form-url="{% url 'intranet:perfil_edit' user.id %}">
+                           <span class="fa fa-user-alt"></span>
+                          {% else %}
+                          <button type="button" class="edit bs-modal btn btn-sm btn-secondary" data-form-url="{% url 'intranet:perfil_create' %}">
+                          <span class="fa fa-plus"></span>
+                          {% endif %}
+                        </button>
+                         {% else %}
+                         
+                        <button type="button" class="btn btn-sm btn-secondary">
+                            <span class="fa fa-lock"></span>
+                        </button>
+                        {% endif %}
+                        {% if perms.users.delete_user %}
+                        <button type="button" class="delete bs-modal btn btn-sm btn-danger" data-form-url="#">
+                            <span class="fa fa-trash"></span>
+                        </button>
+                        {% else %}
+                        <button type="button" class="btn btn-sm btn-secondary">
+                            <span class="fa fa-lock"></span>
+                        </button>
+                        {% endif %}
+                        </td>
+                    </button>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</section>
+</div>
+<div class="modal fade" tabindex="-1" role="dialog" id="modal">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content"></div>
+    </div>
+  </div>
+{% include 'login/logout_modal.html' %}
+{% endblock %}
+
+{% block footer_scripts %}
+<script>
+    $(document).ready( function () {
+    $('#unidadeTable').DataTable({
+      language : {
+            url: '//cdn.datatables.net/plug-ins/1.13.7/i18n/pt-BR.json',
+        }
+      });
+    });
+    document.addEventListener('DOMContentLoaded', (e) => {
+    modalForm(document.getElementById('create_user'), {
+    formURL: "{% url 'users:create_user' %}"
+  })
+});
+document.addEventListener('DOMContentLoaded', (e) => {
+  var deleteButtons = document.getElementsByClassName("delete");
+  var editButtons = document.getElementsByClassName("edit");
+  var viewButtons = document.getElementsByClassName("view");
+  for (var index=0; index < deleteButtons.length; index++) {
+    modalForm(deleteButtons[index], {
+      formURL: deleteButtons[index]["dataset"]["formUrl"],
+      isDeleteForm: true
+    });
+  };
+  for (var index=0; index < editButtons.length; index++) {
+    modalForm(editButtons[index], {
+      formURL: editButtons[index]["dataset"]["formUrl"],
+    });
+  };
+  for (var index=0; index < viewButtons.length; index++) {
+    modalForm(viewButtons[index], {
+      formURL: viewButtons[index]["dataset"]["formUrl"],
+    });
+  }
+});
+
+</script>
+{% endblock footer_scripts %}
+

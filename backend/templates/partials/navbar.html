@@ -1,0 +1,134 @@
+{% load static %}
+<nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <!-- Container wrapper -->
+    <div class="container-fluid">
+      <!-- Toggle button -->
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-mdb-toggle="collapse"
+        data-mdb-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <i class="fas fa-bars"></i>
+      </button>
+  
+      <!-- Collapsible wrapper -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <!-- Navbar brand -->
+        {% include 'partials/navbar_itens/_brand.html' %}
+
+        <!-- Left links -->
+
+        
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          {% include 'partials/navbar_itens/_cadastros.html' %}
+
+          {% include 'partials/navbar_itens/_intranet.html' %}
+
+          {% include 'partials/navbar_itens/_crm.html' %}
+         
+          {% include 'partials/navbar_itens/_cms.html' %}
+
+          
+          {% include 'partials/navbar_itens/_configuracoes.html' %}
+
+        </ul>
+
+
+        
+        <!-- Left links -->
+      </div>
+      <!-- Collapsible wrapper -->
+  
+      <!-- Right elements -->
+      <div class="d-flex align-items-center">
+        <!-- Icon -->
+        <!-- Notifications -->
+        <div class="dropdown">
+          <a
+            class="link-secondary me-3 dropdown-toggle hidden-arrow"
+            href="#"
+            id="navbarDropdownMenuLink"
+            role="button"
+            data-mdb-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <i class="fas fa-bell"></i>
+            <span class="badge rounded-pill badge-notification bg-danger">{% if messages %} {{messages|length}} {% endif %}</span>
+          </a>
+          <ul
+            class="messages dropdown-menu dropdown-menu-end"
+            aria-labelledby="navbarDropdownMenuLink"
+          >
+          {% if messages %}
+          {% for message in messages %}
+              <li{% if message.tags %} class="dropdown-item {{ message.tags }}"{% endif %}>{{ message }}</li>
+              {% endfor %}
+          {% else %}          
+              <li class="dropdown-item">Não há novas notificações.</li>
+          {% endif %}
+          </ul>
+
+          
+          
+          
+        </div>
+        <!-- Avatar -->
+        <div class="dropdown">
+          <a
+            class="dropdown-toggle d-flex align-items-center hidden-arrow"
+            href="#"
+            id="navbarDropdownMenuAvatar"
+            role="button"
+            data-mdb-toggle="dropdown"
+            aria-expanded="false"
+          >
+          {% if request.user.perfilcolaborador.imagem %}
+            <img
+            
+              src="/media/{{request.user.perfilcolaborador.imagem}}"
+              class="rounded-circle"
+              height="25"
+              alt="img"
+              loading="lazy"
+            />
+         {% else %}
+              <img
+                  
+              src="{% static 'avatar-placeholder.gif' %}"
+              class="rounded-circle"
+              height="25"
+              alt="img"
+              loading="lazy"
+            />
+        {% endif %}
+
+          </a>
+
+          <ul
+            class="dropdown-menu dropdown-menu-end"
+            aria-labelledby="navbarDropdownMenuAvatar"
+          >
+            <li>
+              <a class="dropdown-item" href="#">Meu Perfil</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">Minhas Configurações</a>
+            </li>
+            
+            <li>
+              <button type="button" class="btn btn-primary" data-mdb-toggle="modal" data-mdb-target="#logoutModal">
+                Sair
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- Right elements -->
+    </div>
+    <!-- Container wrapper -->
+  </nav>
+  <!-- Navbar -->

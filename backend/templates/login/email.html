@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Redefinição de Senha</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            background: #f2f2f2;
+            padding: 20px;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff !important;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .button:hover {
+            background-color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="https://maissabor.ind.br/wa_images/logo%20mais%20sabor_sem%20fundo.png" alt="Logo" style="height: 60px;">
+        <br>
+        <h2>Olá {{ user.first_name }}</h2>
+        <p>
+            Para criar uma nova senha e acessar a intranet, você deve clicar no link abaixo:
+        </p>
+        <p>
+            <a href="{{ reset_url }}" class="button">Criar Nova Senha</a>
+        </p>
+        <p>Se você não solicitou esse link, basta ignorá-lo.</p>
+
+        <p>Atenciosamente</p>
+
+        <p><b> Equipe Intranet </b></p>
+
+        <p><i>Em caso de dúvidas encaminhe um e-mail para info@versesolutions.net</p>
+
+    </div>
+</body>
+</html>

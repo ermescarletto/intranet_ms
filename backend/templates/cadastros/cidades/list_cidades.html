@@ -1,0 +1,46 @@
+{% extends 'base.html'%}
+
+{% block content %}
+<div class="container mt-3 ">
+<section>
+    <table id="unidadeTable" class="table responsive display">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Estado</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for cidade in cidades %}
+            <tr>
+                <td>{{ cidade.nome }}</td>
+                <td>{{ cidade.estado}}</td>
+              
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</section>
+</div>
+<div class="modal fade" tabindex="-1" role="dialog" id="modal">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content"></div>
+    </div>
+</div>
+{% include 'login/logout_modal.html' %}
+{% endblock %}
+
+{% block footer_scripts %}
+
+<script>
+    $(document).ready( function () {
+    $('#unidadeTable').DataTable({
+        language : {
+            url: '//cdn.datatables.net/plug-ins/1.13.7/i18n/pt-BR.json',
+      }
+    });
+    });
+</script>
+{% endblock footer_scripts %}
+
+

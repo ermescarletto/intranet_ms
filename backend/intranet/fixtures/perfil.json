@@ -1,0 +1,13 @@
+[
+    {
+        "model":"intranet.perfilcolaborador",
+        "pk" : 1,
+        "fields" : {
+            "usuario" : 1,
+            "bio" : "Uma bosta",
+            "unidade" : 1,
+            "departamento" : 2,
+            "cargo": 99081079
+        }
+    }
+]

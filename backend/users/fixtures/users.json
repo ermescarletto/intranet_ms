@@ -1,0 +1,56 @@
+
+
+[
+    {
+        "model": "users.user",
+        "pk": 2,
+        "fields" : {
+            
+            "username" : "carletto",
+            "password" : "ecju2403=",
+            "first_name" : "Ermes",
+            "is_active" : true,
+            "is_staff" : true,
+            "last_name" :"Carletto",
+            "email" : "ermes.carletto@gmail.com",
+            "cpf" : "00100900200",
+            "telefone" : "48991650501",
+            "data_nascimento" : "1985-01-05"
+        }
+    },
+    {
+        "model": "users.user",
+        "pk": 3,
+        "fields" : {
+            
+            "username" : "charles",
+            "password" : "ecju2403=",
+            "first_name" : "Charles",
+            "last_name" :"Betiato",
+            "is_active" : true,
+            "is_staff" : true,
+            "email" : "charles.betiato@maissabor.ind.br",
+            "cpf" : "00100900200",
+            "telefone" : "48991650501",
+            "data_nascimento" : "1985-01-05"
+        }
+    },
+    {
+        "model": "users.user",
+        "pk": 4,
+        "fields" : {
+            
+            "username" : "daniel",
+            "password" : "ecju2403=",
+            "first_name" : "Daniel",
+            "last_name" :"Carniel",
+            "is_active" : true,
+            "is_staff" : true,
+            "email" : "daniel@maissabor.ind.br",
+            "cpf" : "00100900200",
+            "telefone" : "48991650501",
+            "data_nascimento" : "1985-01-05"
+        }
+    }
+]
+

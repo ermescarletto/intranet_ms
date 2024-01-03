@@ -1,0 +1,17 @@
+{% extends 'base.html'%}
+
+{% block content %}
+
+    
+{% include 'campanha/campanha.html' %}
+
+
+    
+{% include 'politicas/widget_home.html' %}
+    
+{% if aniversariantes %}
+{% include 'equipe/aniversariantes.html' %}
+{% endif %}
+
+{% include 'login/logout_modal.html' %}
+{% endblock %}

@@ -1,0 +1,84 @@
+{% load widget_tweaks %}
+
+
+
+<div class="modal-header">
+  <h5 class="modal-title">Visualizar Campanha</h5>
+  <button type="button" class="btn close btn-rounded btn-secondary" data-bs-dismiss="modal" data-dismiss="modal" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+
+<div class="modal-body">
+  <table class="table table-borderless">
+    <tr>
+      <td>
+        <strong>Id:</strong>
+      </td>
+      <td>
+        {{ bannercampanha.id }}
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <strong>Título:</strong>
+      </td>
+      <td>
+        {{ bannercampanha.titulo_campanha }}
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <strong>Texto:</strong>
+      </td>
+      <td>
+        {{ bannercampanha.slogan_campanha }}
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <strong>Imagem:</strong>
+      </td>
+        <td><img  src='/media/{{bannercampanha.imagem_campanha}}' class="img-thumbnail" /></td>
+    </tr>
+    <tr>
+      <td>
+        <strong>Data Inicial:</strong>
+      </td>
+        <td>
+          {{bannercampanha.data_inicial}}        
+        </td>
+    </tr>
+    <tr>
+      <td>
+        <strong>Data Final:</strong>
+      </td>
+        <td>
+          {{bannercampanha.data_final}}        
+        </td>
+    </tr>
+    
+    <tr>
+      <td>
+        <strong>Ativo:</strong>
+      </td>
+        <td>
+          {{bannercampanha.ativo}}        
+        </td>
+    </tr>
+
+    <tr>
+      <td>
+        <strong>Exibe texto:</strong>
+      </td>
+        <td>
+          {{bannercampanha.exibir_texto}}        
+        </td>
+    </tr>
+
+</table>
+
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-default btn-primary bg-gradient" data-bs-dismiss="modal" data-dismiss="modal-view">Fechar</button>
+</div>

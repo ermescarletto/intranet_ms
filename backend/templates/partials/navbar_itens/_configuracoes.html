@@ -1,0 +1,20 @@
+<li class="nav-item dropdown">
+    <a
+      class="nav-link dropdown-toggle"
+      href="#"
+      id="navbarDropdownMenuLink"
+      role="button"
+      data-mdb-toggle="dropdown"
+      aria-expanded="false"
+    >
+      Configurações
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+      <li>
+        <a class="dropdown-item" href="{% url 'intranet:create_unidade' %}">Unidades</a>
+        <a class="dropdown-item" href="{% url 'intranet:create_departamento' %}">Departamentos</a>
+        <a class="dropdown-item" href="{% url 'intranet:create_cargo' %}">Cargos</a>
+        <a class="dropdown-item" href="{% url 'users:user_list' %}">Permissões dos Usuários</a>
+      </li>
+    </ul>
+  </li>
