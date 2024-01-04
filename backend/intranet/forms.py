@@ -1,6 +1,7 @@
-from .models import PerfilColaborador
+from .models import PerfilColaborador, Unidade
 from bootstrap_modal_forms.forms import BSModalModelForm
 from django import forms
+
 
 class PerfilUserForm(BSModalModelForm):
     first_name = forms.CharField(
@@ -54,7 +55,12 @@ class PerfilUserForm(BSModalModelForm):
 
 
 class PerfilColaboradorForm(BSModalModelForm):
+    unidade = forms.ModelChoiceField(
+        queryset= Unidade.objects.all(),
+        label='Unidade'
+    )
     class Meta:
+        
         model = PerfilColaborador
         fields = [
                   'unidade',

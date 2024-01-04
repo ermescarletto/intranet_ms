@@ -162,6 +162,9 @@ from .forms import PerfilUserForm, PerfilColaboradorForm
 from bootstrap_modal_forms.generic import BSModalCreateView, BSModalReadView, BSModalUpdateView, BSModalDeleteView
 from django.contrib.messages.views import SuccessMessageMixin
 from django.urls import reverse_lazy
+from backend.utils import *
+from django.shortcuts import get_object_or_404
+from users.models import User
 
 
 class PerfilCreateModalView(BSModalCreateView,SuccessMessageMixin,LoginRequiredMixin):
@@ -170,14 +173,37 @@ class PerfilCreateModalView(BSModalCreateView,SuccessMessageMixin,LoginRequiredM
     form_class = PerfilColaboradorForm
     success_message = 'Perfil criado com sucesso.'
     success_url = reverse_lazy('users:user_list')
+
+    def dispatch(self, request, *args, **kwargs):
+        # Decodifique o hashid para obter o ID real do usuário
+        user_id = decode_id(kwargs['hashid'])
+        if user_id is None:
+            # Lidar com o caso em que o hashid é inválido (opcional)
+            return render(request, '404.html')
+
+        self.user = get_object_or_404(User, pk=user_id)  # Substitua User pelo seu modelo de usuário
+        return super().dispatch(request, *args, **kwargs)
     
+      
+    def form_valid(self, form):
+        # Associe o usuário ao perfil antes de salvar
+        perfil = form.save(commit=False)
+        perfil.usuario_id = self.user.id  # Supondo que o seu modelo PerfilColaborador tenha um campo 'user'
+        perfil.save()
+
+        return super().form_valid(form)
+
+
+
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context["modal_title"] = 'Perfil de Usuário'
         context["hint"] = 'Vincule o usuário para que possa ter acesso às políticas.'
 
         return context
-    
+  
+
+
 from django.forms.models import model_to_dict
 
 

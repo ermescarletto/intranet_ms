@@ -1,4 +1,7 @@
+
 {% extends 'base.html'%}
+
+{% load customtags %}
 
 {% block content %}
 <div class="container">
@@ -48,7 +51,7 @@
                           <button type="button" class="edit bs-modal btn btn-sm btn-secondary" data-form-url="{% url 'intranet:perfil_edit' user.id %}">
                            <span class="fa fa-user-alt"></span>
                           {% else %}
-                          <button type="button" class="edit bs-modal btn btn-sm btn-secondary" data-form-url="{% url 'intranet:perfil_create' %}">
+                          <button type="button" class="edit bs-modal btn btn-sm btn-secondary" data-form-url="{% url 'intranet:perfil_create' user.id|encode_id  %}">
                           <span class="fa fa-plus"></span>
                           {% endif %}
                         </button>

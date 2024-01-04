@@ -27,7 +27,7 @@ urlpatterns = [
     path('cargos/', CargosList.as_view(), name='create_cargo'),
     path('equipe/',EquipeListView.as_view(), name='equipe'),
     path('edit_perfil/<int:pk>',PerfilEdit.as_view(),name='perfil_edit'),
-    path('create_perfil/',PerfilCreateModalView.as_view(),name='perfil_create')
+    path('create_perfil/<str:hashid>',PerfilCreateModalView.as_view(),name='perfil_create')
 
     
 ]
