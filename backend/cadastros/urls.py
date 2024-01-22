@@ -10,7 +10,11 @@ urlpatterns = [
     
     ################# URLS CRUD TEMPLATE #############
     path('cidades/',CidadesListView.as_view(), name='list_cidades'),
-   
+    path('bairros/',BairroListView.as_view(), name='list_bairros'),
+    path('bairros/create',BairroCreateView.as_view(), name='create_bairro'),
+    path('bairros/edit/<int:pk>',BairroEditView.as_view(), name='edit_bairro'),
+    path('bairros/remove/<int:pk>',BairroDeleteView.as_view(), name='remove_bairro'),
+
    
    
    

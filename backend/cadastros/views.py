@@ -1,3 +1,5 @@
+from django.urls import reverse_lazy
+from bootstrap_modal_forms.generic import BSModalCreateView, BSModalReadView, BSModalUpdateView, BSModalDeleteView
 from django.shortcuts import render
 from rest_framework import generics
 from .models import *
@@ -52,9 +54,12 @@ class EnderecoPessoaFisicaList(generics.ListCreateAPIView):
 from django.views import View
 from django.contrib.auth.mixins import LoginRequiredMixin
 
+##### LIST CIDADES ######
 
 class CidadesListView(View, LoginRequiredMixin):
+    
     login_url = '/users/login/'
+    
     def get(self,request):
         cidades = Cidade.objects.all().order_by('id').values()
         context = {
@@ -62,6 +67,98 @@ class CidadesListView(View, LoginRequiredMixin):
             'page_title' : 'Cadastro de Cidades'
         }
         return render(request,"cadastros/cidades/list_cidades.html", context=context)
+
+
+##### LIST BAIRROS ######
+
+class BairroListView(View, LoginRequiredMixin):
+    login_url = '/users/login/'
+    def get(self,request):
+        bairros = Bairro.objects.all().order_by('cidade')
+        context = {
+            'bairros' : bairros,
+            'page_title' : 'Cadastro de Bairros'
+        }
+        return render(request,"cadastros/bairros/list_bairros.html", context=context)
+
+###### CRIA BAIRROS #######
+
+class BairroCreateView(BSModalCreateView, LoginRequiredMixin):
+    login_url = '/user/login/'
+    template_name = 'generic/create.html'
+    form_class = BairroModelForm
+    success_message = 'Bairro criado com sucesso.'
+    success_url = reverse_lazy('cadastros:list_bairros')
+    
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)    
+        context["modal_title"] = 'Criar bairro'
+        context["hint"] = '*Ao criar um bairro verifique se o mesmo já não existe no sistema.'
+
+        return context
+
+
+###### EDITA BAIRROS  #######
+
+
+class BairroEditView(BSModalUpdateView, LoginRequiredMixin):
+    login_url = '/user/login/'
+    model = Bairro
+    template_name = 'generic/edit.html'
+    form_class = BairroModelForm
+    success_message = 'Bairro editado com sucesso!'
+    success_url = reverse_lazy('cadastros:list_bairros')
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)    
+        context["modal_title"] = 'Editar bairro'
+        context["hint"] = '*Cuidado, você está editando um bairro do sistema.'
+
+        return context
+
+
+class BairroDeleteView(BSModalDeleteView, LoginRequiredMixin):
+    login_url = '/user/login/'
+    model = Bairro
+    template_name = 'generic/delete.html'
+    success_message = 'Bairro removido com sucesso.'
+    error_message = 'Não foi possível remover este bairro.'
+    success_url = reverse_lazy('cadastros:list_bairros')
+    error_url = reverse_lazy('cadastros:list_bairros')
+    
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)    
+        context["modal_title"] = 'Remover bairro'
+        context["hint"] = '*Cuidado, você está editando um bairro do sistema.'
+        context["registro"] = self.object
+        return context
+
+    def post(self, request, *args, **kwargs):
+        self.object = self.get_object()
+        success_url = self.get_success_url()
+        try:
+            self.object.delete()
+        except ProtectedError:
+            messages.error(request, "Não foi possível excluir o registro.")
+        finally:
+            return HttpResponseRedirect(success_url)
+
+
+
+
+
+
+
+from django.urls import reverse_lazy
+from .forms import PessoaFisicaModalForm
+from .models import PessoaFisica
+from bootstrap_modal_forms.generic import BSModalCreateView, BSModalReadView, BSModalUpdateView, BSModalDeleteView
+from django.db.models import ProtectedError
+from django.http import HttpResponseRedirect
+from django.shortcuts import render, redirect
+from django.contrib import messages
+from django.views.generic import ListView
+
 
 
 class PessoasListView(View, LoginRequiredMixin):
@@ -75,15 +172,6 @@ class PessoasListView(View, LoginRequiredMixin):
         return render(request,"cadastros/pessoas/list_pessoas.html", context=context)
 
 
-from django.urls import reverse_lazy
-from .forms import PessoaFisicaModalForm
-from .models import PessoaFisica
-from bootstrap_modal_forms.generic import BSModalCreateView, BSModalReadView, BSModalUpdateView, BSModalDeleteView
-from django.db.models import ProtectedError
-from django.http import HttpResponseRedirect
-from django.shortcuts import render, redirect
-from django.contrib import messages
-from django.views.generic import ListView
 
 class PessoaFisicaInLine():
     form_class = PessoaFisicaModalForm

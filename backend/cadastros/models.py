@@ -24,18 +24,18 @@ class Cidade(models.Model):
 		return self.nome
 	
 	def __str__(self):
-		return '{}-{}'.format(self.nome,self.estado)
+		return f'{self.nome} - {self.estado}'
 
 class Bairro(models.Model):
 	nome = models.CharField(max_length=60)
 	cidade = models.ForeignKey(Cidade, on_delete=models.CASCADE)
-
+	def __str__(self):
+			return f'{self.nome} - {self.cidade}'
 	class Meta:
 		unique_together = ['nome','cidade']
 		ordering = ['cidade','nome']
 
-	def __str__(self):
-		return '%d: %s' % (self.nome, self.cidade)
+	
 	
 class Logradouro(models.Model):
 	nome = models.CharField(max_length=60)

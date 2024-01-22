@@ -180,7 +180,7 @@ class UserCreateModalView(BSModalCreateView,SuccessMessageMixin,LoginRequiredMix
         context["modal_title"] = 'Cadastro de Usuário'
         context["hint"] = 'Realize o cadastro do usuário para que ele possa ter acesso à intranet.'
 
-        return context
+        return context 
     
 from django.forms.models import model_to_dict
 

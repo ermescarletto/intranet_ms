@@ -4,7 +4,7 @@
   {% csrf_token %}
 
  <div class="modal-header">
-    <h5 class="modal-title">{{ modal_title }}</h5>
+    <h5 class="modal-title">{{ modal_title|upper }}</h5>
     <button type="button" class="btn close btn-rounded btn-secondary" data-bs-dismiss="modal" data-dismiss="create-modal" aria-label="Fechar">
       <span aria-hidden="true">&times;</span>
     </button>
