@@ -2,9 +2,9 @@
 
 {% block content %}
 <div class="container mt-3 ">
-    <button id="create_bairro" class="mt-3 mb-3 btn btn-primary" type="button" name="button">+ Bairro</button>
+    <button id="create_logradouro" class="mt-3 mb-3 btn btn-primary" type="button" name="button">+ Logradouro</button>
 <section>
-    <table id="bairroTable" class="table responsive display">
+    <table id="logradouroTable" class="table responsive display">
         <thead>
             <tr>
                 <th>Nome</th>
@@ -14,12 +14,11 @@
             </tr>
         </thead>
         <tbody>
-            {% for bairro in bairros %}
+            {% for logradouro in logradouros %}
             <tr>
-                <td>{{ bairro.nome|upper }}</td>
-                <td>{{ bairro.cidade|upper }}</td>
-                <td>    
-              
+                <td>{{ logradouro.nome|upper }}</td>
+                <td>{{ logradouro.cidade|upper }}</td>
+                <td>
                   {% if perms.users.edit_user %}
                       <button type="button" class="edit bs-modal btn btn-sm btn-secondary" data-form-url="{% url 'cadastros:edit_bairro' bairro.id %}">
                       <span class="fa fa-pen"></span>
@@ -56,15 +55,15 @@
 
 <script>
         $(document).ready( function () {
-        $('#bairroTable').DataTable({
+        $('#logradouroTable').DataTable({
           language : {
                 url: '//cdn.datatables.net/plug-ins/1.13.7/i18n/pt-BR.json',
             }
           });
         });
         document.addEventListener('DOMContentLoaded', (e) => {
-        modalForm(document.getElementById('create_bairro'), {
-        formURL: "{% url 'cadastros:create_bairro' %}"
+        modalForm(document.getElementById('create_logradouro'), {
+        formURL: "{% url 'cadastros:create_logradouro' %}"
       })
     });
     document.addEventListener('DOMContentLoaded', (e) => {

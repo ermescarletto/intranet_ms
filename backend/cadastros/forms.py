@@ -1,4 +1,4 @@
-from .models import PessoaFisica, EnderecoPessoaFisica, ContatoPessoaFisica, Bairro, Cidade
+from .models import *
 from bootstrap_modal_forms.forms import BSModalModelForm
 from django import forms
 from django.forms import inlineformset_factory
@@ -111,6 +111,47 @@ class BairroModelForm(BSModalModelForm):
                     'cidade'
                     ]
 
+
+
+
+class LogradouroModelForm(BSModalModelForm):
+     nome = forms.CharField(
+         widget=forms.TextInput(
+              attrs={
+                   'class' : 'form-control form-outlined',
+              }
+         )
+     )
+     
+     
+     cidade = forms.ModelChoiceField(
+          queryset= Cidade.objects.all(),
+          widget= forms.Select(
+               
+          attrs={
+                   'class' : 'form-control form-outlined',
+              }
+          )
+          
+     )
+     
+     bairro = forms.ModelChoiceField(
+          queryset=Bairro.objects.all(),
+          widget=forms.Select(
+              attrs={
+                   'class' : 'form-control form-outlined',
+              }
+         )
+          
+     )
+     
+     class Meta:
+          model = Logradouro
+          fields = [
+                    'nome',
+                    'cidade',
+                    'bairro',
+                    ]
 
 EnderecoFormSet = inlineformset_factory(
     PessoaFisica, EnderecoPessoaFisica, form=EnderecoPessoaFisicaForm, extra=1

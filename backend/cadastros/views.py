@@ -145,6 +145,45 @@ class BairroDeleteView(BSModalDeleteView, LoginRequiredMixin):
 
 
 
+###################### VIEWS DO CADASTRO DE LOGRADOUROS ##########################
+        
+class LogradourosListView(View, LoginRequiredMixin):
+    login_url = '/users/login/'
+    def get(self,request):
+        logradouros = Logradouro.objects.all().order_by('cidade')
+        context = {
+            'logradouros' : logradouros,
+            'page_title' : 'Cadastro de Logradouros'
+        }
+        return render(request,"cadastros/logradouros/list_logradouros.html", context=context)
+
+
+class LogradouroCreateView(BSModalCreateView, LoginRequiredMixin):
+    login_url = '/user/login/'
+    template_name = 'generic/create.html'
+    form_class = LogradouroModelForm
+    success_message = 'Logradouro criado com sucesso.'
+    success_url = reverse_lazy('cadastros:list_logradouros')
+    
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)    
+        context["modal_title"] = 'Criar logradouro'
+        context["hint"] = '*Ao criar um logradouro verifique se o mesmo já não existe no sistema.'
+
+        return context
+
+
+from django.http import JsonResponse
+
+
+class BuscaBairroCidade(LoginRequiredMixin,View):
+    login_url = '/user/login/'
+    
+    def get(self, request):
+        cidade = request.GET.get('cidade')
+        bairros = Bairro.objects.filter(cidade=cidade).order_by('nome')
+        return JsonResponse(list(bairros.values('id','nome')),safe=False)
+        
 
 
 

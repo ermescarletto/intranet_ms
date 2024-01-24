@@ -38,3 +38,28 @@
   </div>
 
 </form>
+
+{% block script %}
+
+<script>
+  $(document).ready(function(){
+    $('#id_cidade').change(function(){
+        var url = "{% url 'cadastros:get_bairros' %}";
+        var cidadeId = $(this).val();
+        $.ajax({
+            url: url,
+            data: {
+                'id_cidade': cidadeId
+            },
+            success: function (data) {
+                $("#id_bairro").html('<option value="">Escolha um bairro...</option>');
+                data.forEach(function (bairro) {
+                    $("#id_bairro").append('<option value="' + bairro.id + '">' + bairro.nome + '</option>');
+                });
+            }
+        });
+    });
+});
+</script>
+
+{% endblock %}
